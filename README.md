@@ -1,1 +1,1 @@
-Rust RCON Connect to server and manage it with this GUI
+Basic Rust RCON Connect to server and manage it with this GUI 
