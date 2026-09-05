@@ -10,13 +10,15 @@ from datetime import datetime
 # CONFIGURATION
 RCON_IP = "192.168.0.202"
 RCON_PORT = 5678
-RCON_PASSWORD = "A6NQxBkd+3iK"
+#leave blank if RCON is not Password protected
+RCON_PASSWORD = ""
 LOG_FILE_PATH = "server_console_history.txt"
 BAN_FILE = "ban_registry.json"
 
 class RustDashboardApp:
     def __init__(self, root):
         self.root = root
+        #Titel here :) small dark 
         self.root.title("Dec's Server - RUST Absolute Master Administration Hub")
         self.root.geometry("1500x850")
         self.root.configure(bg="#2b2d31")  # Dark theme
@@ -34,7 +36,7 @@ class RustDashboardApp:
         self.left_panel = tk.Frame(self.root, bg="#1e1f22", width=320, padx=15, pady=15)
         self.left_panel.grid(row=0, column=0, sticky="nsew")
         self.left_panel.grid_propagate(False)
-
+        #Title Large
         tk.Label(self.left_panel, text="R.U.S.T", font=("Courier New", 24, "bold"), fg="#e05a47", bg="#1e1f22").pack(anchor="w")
         tk.Label(self.left_panel, text="Dec's Absolute Hub", font=("Arial", 9, "italic"), fg="#949ba4", bg="#1e1f22").pack(anchor="w", pady=(0, 10))
 
